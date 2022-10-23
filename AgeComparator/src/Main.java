@@ -1,8 +1,8 @@
-public class main {
+public class Main {
     public static void main(String[] args) {
-        int vasyaAge = 29;
-        int katyaAge = 14;
-        int mishaAge = 36;
+        int vasyaAge = 33;
+        int katyaAge = 22;
+        int mishaAge = 14;
 
         int min = -1; // минимальный возраст
         int middle = -1; // средний возраст
@@ -27,17 +27,20 @@ public class main {
         }
 
         // find middle age
-        if (vasyaAge >= katyaAge || vasyaAge <= mishaAge && vasyaAge <= katyaAge || vasyaAge >= mishaAge) {
+        if ((vasyaAge >= katyaAge && vasyaAge <= mishaAge) || (vasyaAge <= katyaAge && vasyaAge >= mishaAge)) {
             middle = vasyaAge;
-        } else if (katyaAge >= vasyaAge || katyaAge <= mishaAge && katyaAge <= vasyaAge || katyaAge >= mishaAge) {
+        }
+        if ((katyaAge >= vasyaAge && katyaAge <= mishaAge) || (katyaAge <= vasyaAge && katyaAge >= mishaAge)) {
             middle = katyaAge;
-        } else if (mishaAge >= katyaAge || mishaAge <= vasyaAge && mishaAge <= katyaAge || mishaAge >= vasyaAge) {
+        }
+        if ((mishaAge >= katyaAge && mishaAge <= vasyaAge) || (mishaAge <= katyaAge && mishaAge >= vasyaAge)) {
             middle = mishaAge;
         }
 
+
         //out in console Minimal, Maximal and Middle age
-        System.out.println("Minimal age:"+ min);
-        System.out.println("Middle age:"+ middle);
-        System.out.println("Maximal age:"+ max);
+        System.out.println("Minimal age:" + min);
+        System.out.println("Middle age:" + middle);
+        System.out.println("Maximal age:" + max);
     }
 }
