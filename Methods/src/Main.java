@@ -1,25 +1,10 @@
-import java.time.LocalDateTime;
-
 public class Main {
-    public static int i = 0;
-    public static int max = 10;
 
     public static void main(String[] args) {
-        iterate();
+        int max = max(300, 200);
+        System.out.println(max);
     }
-
-
-    public static void iterate() {
-
-        if (i < max) {
-            i = i + 1;
-            System.out.println(i);
-            iterate();
-        }
-
+    static int max(int a, int b) {
+        return a>=b ? a : b;
     }
-
-
-
-
 }
